@@ -14,6 +14,7 @@
   <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
 {% endif %}
 
+<link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/global.css' | url }}">
 
 <meta property="og:type" content="website">
@@ -23,3 +24,24 @@
   <meta property="og:image" content="{{ hero.image | url }}">
 {% endif %}
 <meta name="twitter:card" content="summary_large_image">
+
+{# Minimal JSON-LD; emits only when baseUrl is set #}
+{% if site.baseUrl %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.name | safe }}",
+  "url": "{{ site.baseUrl }}",
+  "logo": "{{ site.baseUrl }}{{ '/assets/favicon.svg' | url }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.name | safe }}",
+  "url": "{{ site.baseUrl }}"
+}
+</script>
+{% endif %}

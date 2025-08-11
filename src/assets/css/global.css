@@ -1,0 +1,24 @@
+
+/* === Tokens & Components (golden master) === */
+:root{
+  --brand: #0f766e;            /* primary */
+  --brand-contrast: #ffffff;
+  --text: #111827;
+  --bg: #ffffff;
+  --surface: #f9fafb;
+  --muted: #6b7280;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0f14; --text:#e5e7eb; --surface:#111827; --muted:#9ca3af;
+  }
+}
+body{ background:var(--bg); color:var(--text); }
+a{ color:var(--brand); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.btn{ display:inline-block; padding:.625rem 1rem; border-radius:.5rem; border:1px solid transparent; font-weight:600; }
+.btn-primary{ background:var(--brand); color:var(--brand-contrast); }
+.btn-outline{ background:transparent; border-color:var(--brand); color:var(--brand); }
+
+.card{ background:var(--surface); border:1px solid rgba(0,0,0,.06); border-radius:1rem; padding:1rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
