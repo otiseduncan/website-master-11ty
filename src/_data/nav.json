@@ -1,0 +1,14 @@
+[
+  { "title": "About", "url": "/about/" },
+  { "title": "Beliefs", "url": "/beliefs/" },
+  { "title": "Ministries", "url": "/ministries/" },
+  { "title": "Sermons", "url": "/sermons/" },
+  { "title": "Events", "url": "/events/" },
+  { "title": "Media", "url": "/media/" },
+  { "title": "Teachings", "url": "/teachings/" },
+  { "title": "Prayer", "url": "/prayer/" },
+  { "title": "Speaking", "url": "/speaking/" },
+  { "title": "Support", "url": "/support/" },
+  { "title": "Volunteer", "url": "/volunteer/" },
+  { "title": "Contact", "url": "/contact/" }
+]

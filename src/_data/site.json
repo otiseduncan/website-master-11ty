@@ -1,0 +1,7 @@
+{
+  "name": "Your Site Name",
+  "tagline": "Short tagline here",
+  "description": "A clean, fast website built with Eleventy.",
+  "baseUrl": "https://example.com",
+  "author": "Your Name or Org"
+}

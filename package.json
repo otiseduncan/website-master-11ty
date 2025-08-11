@@ -1,0 +1,18 @@
+{
+  "name": "website-master-11ty",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Golden Master template for brochure/portfolio sites using Eleventy (11ty).",
+  "scripts": {
+    "dev": "eleventy --serve --watch",
+    "build": "eleventy",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

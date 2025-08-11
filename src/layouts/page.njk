@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  {% if hero and hero.image %}
+  <section class="hero">
+    <img class="hero-img" src="{{ hero.image | url }}" alt="{{ hero.alt or title }}">
+    <div class="hero-overlay">
+      <div class="wrap">
+        <h1 class="hero-title">{{ hero.heading or title }}</h1>
+        {% if hero.subheading %}<p class="hero-sub">{{ hero.subheading }}</p>{% endif %}
+      </div>
+    </div>
+  </section>
+  {% else %}
+  <section class="hero hero-blank">
+    <div class="wrap"><h1>{{ title }}</h1></div>
+  </section>
+  {% endif %}
+
+  <section class="content wrap prose">
+    {{ content | safe }}
+  </section>
+{% endblock %}

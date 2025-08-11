@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body class="site-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | url }}">{{ site.name }}</a>
+      {% include "nav.njk" %}
+    </div>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p>&copy; {{ site.name }} {{ "now" | date("yyyy") }}. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="{{ '/policies/privacy/' | url }}">Privacy</a>
+        <a href="{{ '/policies/terms/' | url }}">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script defer src="{{ '/assets/js/site.js' | url }}"></script>
+</body>
+</html>
