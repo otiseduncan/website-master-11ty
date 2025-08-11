@@ -1,12 +1,21 @@
-{% set fullTitle = title ? title + " | " + site.name : site.name %}
+{% if title %}
+  {% set fullTitle = title + " | " + site.name %}
+{% else %}
+  {% set fullTitle = site.name %}
+{% endif %}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>{{ fullTitle }}</title>
 <meta name="description" content="{{ description or site.description }}">
+
 {% if site.baseUrl %}
-  <link rel="canonical" href="{{ site.baseUrl | append: page.url }}">
+  <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
 {% endif %}
+
 <link rel="stylesheet" href="{{ '/assets/css/global.css' | url }}">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ fullTitle }}">
 <meta property="og:description" content="{{ description or site.description }}">

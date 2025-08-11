@@ -1,0 +1,12 @@
+<nav id="site-nav" class="site-nav" aria-label="Main">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <ul>
+    {% for item in nav %}
+      {% set url = item.url %}
+      {% set isCurrent = (page and page.url and page.url.startsWith(url)) %}
+      <li class="{% if isCurrent %}active{% endif %}">
+        <a href="{{ url | url }}" {% if isCurrent %}aria-current="page"{% endif %}>{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
